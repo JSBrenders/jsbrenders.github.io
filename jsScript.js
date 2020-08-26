@@ -376,10 +376,11 @@ function autoTrade() {
         }
 
         if ( (gamePage.resPool.get('titanium').value < (gamePage.resPool.get('paragon').value < 1000 ? gamePage.resPool.get('paragon').value : 200000) || gamePage.resPool.get('blueprint').value < 100) && gamePage.diplomacy.get('zebras').unlocked  && gamePage.resPool.get('gold').value < gamePage.resPool.get('gold').maxValue * 0.95) {
-            if (gamePage.religion.getRU('solarRevolution').val == 1) {
+            // if (gamePage.religion.getRU('solarRevolution').val == 1) {
                 gamePage.diplomacy.tradeAll(game.diplomacy.get("zebras"), 1);
-            }
-            else if (gamePage.resPool.get('gold').value > 515 ) {
+            // }
+            // else 
+            if (gamePage.resPool.get('gold').value > 515 ) {
                 gamePage.diplomacy.tradeMultiple(game.diplomacy.get("zebras"), 1);
             }
         }
