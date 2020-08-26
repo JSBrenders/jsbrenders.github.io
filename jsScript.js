@@ -769,7 +769,7 @@ function autoCraft2() {
 
                          if (flag == true && cnt > 0) {
                             if (resourcesAllF[crf][0] == "ship") {
-                                if (gamePage.resPool.get("ship").value < 5000 || gamePage.resPool.get("starchart").value > 1500){
+                                if (gamePage.resPool.get("ship").value < 5000 || gamePage.resPool.get("starchart").value > 1500 && gamePage.workshop.get("geodesy").researched){
                                     gamePage.craft(resourcesAllF[crf][0], cnt);
                                 }
                             }
