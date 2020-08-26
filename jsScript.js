@@ -1524,14 +1524,32 @@ function Chronosphere10SummPrices() {
 var pause = false
 
 function pause() {
-    pause = !pause
-    if(pause){
-        gamePage.msg("Script is on pause")
-    }
-    else {
-        gamePage.msg("Script is resumed")
-    }
+    var bldPrices = gamePage.bld.getBuildingExt('chronosphere').get('prices');
+   var ratio = gamePage.bld.getPriceRatioWithAccessor(gamePage.bld.getBuildingExt('chronosphere'));
+
+   var prices = {};
+   var sumVal = 0;
+
+   for (var cr = 0; cr< bldPrices.length; cr++){
+       sumVal = 0;
+       for (var g = gamePage.bld.getBuildingExt('chronosphere').meta.val; g <= Math.max(gamePage.bld.getBuildingExt('chronosphere').meta.val,9); g++){
+           sumVal+= bldPrices[cr].val * Math.pow(ratio, g)
+       }
+
+       prices[bldPrices[cr].name] = sumVal
+   }
+   return prices;
 }
+
+// function pause() {
+//     pause = !pause
+//     if(pause){
+//         gamePage.msg("Script is on pause")
+//     }
+//     else {
+//         gamePage.msg("Script is resumed")
+//     }
+// }
 
 
 
