@@ -1525,6 +1525,12 @@ var pause = false
 
 function pause () {
     pause = !pause
+    if(pause){
+        gamePage.msg("Script is on pause")
+    }
+    else {
+        gamePage.msg("Script is resumed")
+    }
 }
 
 
