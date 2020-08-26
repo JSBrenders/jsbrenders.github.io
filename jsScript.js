@@ -47,6 +47,8 @@ var htmlMenuAddition = '<div id="farRightColumn" class="column">' +
 
 '<button id="killSwitch" onclick="clearInterval(clearScript()); gamePage.msg(deadScript);">Kill Switch</button> </br>' +
 '<hr size=5>' +
+'<button id="pauseGame" onclick="pauseGame();">Pause</button> </br>' +
+'<hr size=5>' +
 '<button id="autoEnergy" style="color:black" onclick="autoSwitch(\'Energy Control\',  \'autoEnergy\')"> Energy Control </button></br>' +
 '<hr size=3>' +
 '<button id="Collector" title = "Collect late game res(Tcrystal, Relic, Void) before reset." style="color:red" onclick="autoSwitch(\'CollectResBReset\',  \'Collector\')"> CollectResBReset </button></br>' +
@@ -1523,7 +1525,7 @@ function Chronosphere10SummPrices() {
 
 var pause = false
 
-function pause() {
+function pauseGame() {
     var bldPrices = gamePage.bld.getBuildingExt('chronosphere').get('prices');
    var ratio = gamePage.bld.getPriceRatioWithAccessor(gamePage.bld.getBuildingExt('chronosphere'));
 
