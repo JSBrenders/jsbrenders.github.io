@@ -1187,6 +1187,7 @@ function UpgradeBuildings() {
     var upgradeTarget;
     for (var up = 0; up < mblds.length; up++) {
         upgradeTarget = gamePage.tabs[0].buttons.find(res => res.model.metadata && res.model.metadata.name == mblds[up].name && res.model.metadata.name != "amphitheatre");
+        console.log(upgradeTarget)
         upgradeByModel(upgradeTarget);
     }
 
