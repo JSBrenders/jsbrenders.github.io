@@ -1,3 +1,5 @@
+//Script updated
+
 // These will allow quick selection of the buildings which consume energy
 var bldSmelter = gamePage.bld.buildingsData[15];
 var bldBioLab = gamePage.bld.buildingsData[9];
