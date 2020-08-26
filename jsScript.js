@@ -1523,7 +1523,7 @@ function Chronosphere10SummPrices() {
 
 var pause = false
 
-function pause () {
+function pause() {
     pause = !pause
     if(pause){
         gamePage.msg("Script is on pause")
