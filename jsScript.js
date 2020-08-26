@@ -1184,7 +1184,7 @@ function UpgradeBuildings() {
     var mblds = gamePage.bld.meta[0].meta.filter(res => res.stages && res.stages[1].stageUnlocked && res.stage == 0 && (res.name != "library" || gamePage.space.getProgram("orbitalLaunch").val == 1 ));
     var upgradeTarget;
     for (var up = 0; up < mblds.length; up++) {
-        upgradeTarget = gamePage.tabs[0].buttons.find(res => res.model.metadata && res.model.metadata.name == mblds[up].name);
+        upgradeTarget = gamePage.tabs[0].buttons.find(res => res.model.metadata && res.model.metadata.name == mblds[up].name && res.model.metadata.name != "amphitheatre");
         upgradeByModel(upgradeTarget);
     }
 
